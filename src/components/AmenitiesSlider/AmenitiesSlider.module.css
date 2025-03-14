@@ -166,11 +166,10 @@
   }
   .buttonGrp {
     display: flex;
-    justify-content: flex-start; /* Default alignment */
+    justify-content: flex-start;
     width: 100%;
   }
 
-  /* @media (max-width: 1024px) { */
   .buttonGrp {
     width: 100%;
     display: flex;

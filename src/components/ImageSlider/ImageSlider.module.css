@@ -5,6 +5,10 @@
   overflow: hidden;
   /* margin-top: -20px; */
 }
+.slider {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 .image {
   width: 100%;

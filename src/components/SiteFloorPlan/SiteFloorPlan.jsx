@@ -6,7 +6,7 @@ import Floor1 from "../../assets/Images/floor-1.webp";
 import Floor2 from "../../assets/Images/floor-2.webp";
 import Floor3 from "../../assets/Images/floor-3.webp";
 import Floor4 from "../../assets/Images/floor-4.webp";
-import ImageModal from "../ImageModal/ImageModal"; // Import new modal
+import ImageModal from "../ImageModal/ImageModal";
 
 const floorPlans = [
   { type: "1 BHK", size: "446 Sq.ft", image: Floor1 },
@@ -41,7 +41,6 @@ const SiteFloorPlan = () => {
           comfort.
         </p>
 
-        {/* Master Plan Section */}
         <h2 className={styles.titleHeading}>Master Plan</h2>
         <div
           className={styles.masterPlan}
@@ -59,7 +58,6 @@ const SiteFloorPlan = () => {
           </div>
         </div>
 
-        {/* Floor Plan Filter */}
         <div className={styles.FilterContainer}>
           <p className={styles.title}>Floor Plan</p>
           <div className={styles.filters}>
@@ -77,7 +75,6 @@ const SiteFloorPlan = () => {
           </div>
         </div>
 
-        {/* Floor Plans Grid */}
         <div className={styles.floorPlans}>
           {filteredPlans.map((plan, index) => (
             <div key={index} className={styles.planCard}>

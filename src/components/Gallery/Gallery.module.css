@@ -10,7 +10,6 @@
 }
 
 .header {
-  /* text-align: center; */
   display: flex;
   justify-content: flex-start;
 }
@@ -21,12 +20,10 @@
   color: #111;
   border-bottom: 4px solid #111827;
   display: flex;
-  /* justify-content: flex-start; */
   flex-direction: row;
   padding-bottom: 5px;
 }
 
-/* Text & Button Layout */
 .textButtonContainer {
   display: flex;
   justify-content: space-between;
@@ -65,7 +62,6 @@
   font-size: 16px;
 }
 
-/* Gallery Grid */
 .gallery {
   display: flex;
   justify-content: space-between;
@@ -73,9 +69,7 @@
   flex-wrap: wrap;
 }
 
-/* Image Wrapper */
 .imageWrapper {
-  /* position: relative; */
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -111,24 +105,11 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Hover Effect: Enlarge Image (Only on Desktop) */
 @media (min-width: 768px) {
   .imageWrapper:hover .image {
     transform: scale(1.1);
   }
 }
-
-/* Bottom Overlay Effect */
-/* .overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; 
-  background: rgba(0, 0, 0, 0.6);
-  transition: opacity 0.3s ease-in-out;
-  opacity: 0;
-} */
 
 @media (min-width: 768px) {
   .imageWrapper:hover .overlay {
@@ -136,8 +117,6 @@
     background-color: rgba(0, 0, 0, 0.3);
   }
 }
-
-/* 📱 Responsive Design */
 @media (max-width: 1024px) {
   .container {
     width: 100%;
@@ -173,18 +152,18 @@
   }
 
   .gallery {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
 
   .image {
-    height: 180px; /* Slightly smaller height on mobile */
+    height: 180px;
   }
 }
 
 @media (max-width: 480px) {
   .gallery {
-    grid-template-columns: repeat(1, 1fr); /* 1 column on very small screens */
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .image {

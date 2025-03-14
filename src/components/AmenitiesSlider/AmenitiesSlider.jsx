@@ -82,7 +82,7 @@ const AmenitiesSlider = () => {
         <div className={styles.sliderContainer}>
           <div>
             <h2 className={styles.mainTitle}>
-              <span>Amenities</span>
+              <span>Amenities of Sheth Vasant Lawns </span>
             </h2>
             <p className={styles.mainSubtitle}>
               Discover a lifestyle enriched with premium amenities and

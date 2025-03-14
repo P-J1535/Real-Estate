@@ -2,11 +2,9 @@
 
 .container {
   width: 78%;
-  /* margin: auto; */
   padding: 2rem;
   background-color: #ffffffff;
   border-radius: 10px;
-  /* text-align: center; */
 }
 
 .title {
@@ -83,7 +81,6 @@
   border-radius: 5px;
   font-size: 14px;
   margin-top: 20px;
-  /* margin-bottom: 10px; */
   width: 78%;
   display: flex;
   justify-content: center;

@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css"; // Import phone input styles
+import "react-phone-input-2/lib/style.css";
 import styles from "./ContactForm.module.css";
 import SiteVisitImg from "../../assets/Images/ride.webp";
 import BrochureModal from "../BrochureModal/BrochureModal";
 
 const ContactForm = () => {
-  const [name, setName] = useState(""); // Name state
-  const [email, setEmail] = useState(""); // Email state
-  const [phone, setPhone] = useState(""); // Phone state
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState("");
   const [modalDescription, setModalDescription] = useState("");
@@ -63,7 +63,6 @@ const ContactForm = () => {
           </div>
         </div>
 
-        {/* Name Input */}
         <input
           type="text"
           placeholder="Enter your name"
@@ -72,16 +71,14 @@ const ContactForm = () => {
           onChange={(e) => setName(e.target.value)}
         />
 
-        {/* Phone Input */}
         <PhoneInput
-          country={"in"} // Default country set to India
+          country={"in"} // Default India
           value={phone}
           onChange={(value) => setPhone(value)}
-          inputClass={styles.phoneInput} // Apply custom styles
-          className={styles.phoneInputContainer} // Apply container styles
+          inputClass={styles.phoneInput}
+          className={styles.phoneInputContainer}
         />
 
-        {/* Email Input */}
         <input
           type="email"
           placeholder="Enter your email (optional)"
@@ -90,7 +87,6 @@ const ContactForm = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        {/* Submit Button */}
         <button className={styles.submitButton} onClick={sendMail}>
           Submit
         </button>
@@ -109,7 +105,6 @@ const ContactForm = () => {
           </div>
         </div>
 
-        {/* Book Site Visit Button */}
         <button
           className={styles.bookVisitButton}
           onClick={() =>
@@ -120,7 +115,6 @@ const ContactForm = () => {
         </button>
       </div>
 
-      {/* Modal Component */}
       {showModal && (
         <BrochureModal
           onClose={() => setShowModal(false)}

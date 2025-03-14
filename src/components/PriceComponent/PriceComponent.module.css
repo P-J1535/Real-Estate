@@ -87,7 +87,6 @@
   margin-right: 5px;
 }
 
-/* Pricing Section */
 .pricingSection {
   background-color: #ffffff;
   /* padding: 20px; */
@@ -182,7 +181,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Fixed Image Size */
 .imagePlaceholder img {
   width: 150px;
   height: 100px;
@@ -275,11 +273,6 @@
 
   .costingContent {
     width: 100%;
-  }
-
-  .getDetailsButton,
-  .brochureButton {
-    /* width: 100%; */
   }
 }
 

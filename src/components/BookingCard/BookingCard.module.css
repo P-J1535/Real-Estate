@@ -4,7 +4,6 @@
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
-  /* padding: 15px; */
 }
 
 .header {
@@ -119,7 +118,7 @@
 .siteVisitButton:hover {
   background: #00251c;
 }
-/* list-style-type: disc; */
+
 @media (min-width: 1050px) {
   .card {
     position: absolute;
@@ -128,7 +127,6 @@
   }
 }
 
-/* Ensure full width below 1050px */
 @media (max-width: 1050px) {
   .card {
     width: 100%;

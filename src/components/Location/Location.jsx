@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Location.module.css";
 import LocationImg from "../../assets/Images/map.webp";
-import { LocationOn } from "@mui/icons-material"; // MUI Location Icon
+import { LocationOn } from "@mui/icons-material";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import BrochureModal from "../BrochureModal/BrochureModal";
 
@@ -24,7 +24,6 @@ const Location = () => {
         </p>
 
         <div className={styles.locationWrapper}>
-          {/* Map View */}
           <div className={styles.mapView}>
             <h2>Map View</h2>
             <iframe
@@ -37,7 +36,6 @@ const Location = () => {
           </button> */}
           </div>
 
-          {/* Location Details */}
           <div className={styles.locationDetails}>
             <h2>Location Details</h2>
             <div className={styles.imageWrapper}>
@@ -63,7 +61,6 @@ const Location = () => {
           </div>
         </div>
 
-        {/* Nearby Landmarks */}
         <div className={styles.landmarks}>
           <h3>Nearby Landmarks</h3>
           <ul className={styles.landmarkList}>

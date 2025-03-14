@@ -66,7 +66,7 @@ const BookingCard = () => {
         </div>
       </div>
 
-      {/* Modal Rendering */}
+      {/* Modal Is Rendering */}
       {showModal && (
         <BrochureModal
           onClose={() => setShowModal(false)}

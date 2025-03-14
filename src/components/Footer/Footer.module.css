@@ -1,0 +1,184 @@
+.footer {
+  background: #eeeeee;
+  color: #555e5b;
+  padding: 40px 25px;
+  width: 78%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Company Info */
+.companyInfo {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+.address {
+  font-size: 14px;
+  color: #555e5b;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Quick Links */
+.quickLinks {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+}
+
+.linkItem {
+  margin: 8px 0;
+}
+
+.link {
+  text-decoration: none;
+  color: #555e5b;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #007bff;
+}
+
+/* Social Media */
+.socialMedia {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: flex-start; /* Aligns icons to the left */
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.socialLink:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Contact Info */
+.contactInfo {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.contactDetails {
+  font-size: 14px;
+  color: #555e5b;
+  margin: 5px 0;
+}
+
+/* Copyright */
+.bottom {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+}
+
+.copyright {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .companyInfo,
+  .quickLinks,
+  .socialMedia,
+  .contactInfo {
+    min-width: 100%;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .sectionTitle {
+    font-size: 16px;
+  }
+
+  .contactDetails {
+    font-size: 12px;
+  }
+
+  .socialLink {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}

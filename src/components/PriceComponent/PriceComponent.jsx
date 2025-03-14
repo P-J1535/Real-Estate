@@ -15,6 +15,7 @@ const PriceComponent = () => {
     setShowModal(true);
   };
 
+  // Pricing Static Data use
   const pricingData = [
     {
       type: "2 BHK",
@@ -47,7 +48,6 @@ Based right at the Eastern Express Highway - Vasant lawns opens up the posh, bus
   return (
     <>
       <div className={styles.container} id="priceFactor">
-        {/* Header Section */}
         <section className={styles.headerSection}>
           <h1 className={styles.title}>
             <span>Welcome</span> To Sheth Vasant Lawns
@@ -152,6 +152,7 @@ Based right at the Eastern Express Highway - Vasant lawns opens up the posh, bus
           </div>
         </section>
       </div>
+      {/* Modal render*/}
       {showModal && (
         <BrochureModal
           onClose={() => setShowModal(false)}

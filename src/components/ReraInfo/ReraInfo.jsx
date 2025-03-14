@@ -51,7 +51,6 @@ const ReraInfo = () => {
           </p>
         </div>
       </div>
-
       <div className={styles.copyRIght}>
         <p>
           © Copyright |{" "}

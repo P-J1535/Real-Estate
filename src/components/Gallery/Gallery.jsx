@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Gallery.module.css";
-import { FaDownload } from "react-icons/fa"; // Import download icon
+import { FaDownload } from "react-icons/fa";
 import Gallery1 from "../../assets/Images/Gallery1.webp";
 import Gallery2 from "../../assets/Images/Gallery2.webp";
 import Gallery3 from "../../assets/Images/Gallery3.webp";
