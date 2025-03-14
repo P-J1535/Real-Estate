@@ -1,0 +1,329 @@
+.container {
+  width: 100%;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  margin: auto;
+}
+
+.headerSection {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #111827;
+}
+
+.title span {
+  display: inline-block;
+  position: relative;
+}
+
+.title span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #023020;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.readMoreButton {
+  background-color: transparent;
+  color: #024b30;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+}
+
+.readMoreButton:hover {
+  text-decoration: underline;
+}
+
+.description {
+  width: 75%;
+  font-size: 16px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.buttonContainer {
+  display: flex;
+  width: 78%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.brochureButton {
+  background-color: #024b30;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.brochureButton:hover {
+  background-color: #017a4b;
+  transform: scale(1.05);
+}
+
+.downloadIcon {
+  margin-right: 5px;
+}
+
+/* Pricing Section */
+.pricingSection {
+  background-color: #ffffff;
+  /* padding: 20px; */
+  border-radius: 8px;
+}
+
+.pricingTitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.pricingTitle span {
+  display: inline-block;
+  position: relative;
+}
+
+.pricingTitle span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #023020;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.pricingDescription {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 20px;
+  width: 60%;
+}
+
+/* Responsive Table */
+.pricingTable {
+  width: 78%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pricingTable th,
+.pricingTable td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.pricingTable th {
+  background-color: #f3f3f3;
+  font-weight: 600;
+  color: #555e5b;
+  font-size: 14px;
+}
+
+.pricingTable td {
+  color: #181b1a;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pricingTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+.priceBreakupButton {
+  background-color: #023020;
+  color: #ffffff;
+  border: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Costing Section */
+.costingSection {
+  width: 78%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fixed Image Size */
+.imagePlaceholder img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.costingContent > h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #111827;
+}
+
+.costingContent > p {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+.getDetailsButton {
+  background-color: #023020;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+/* Responsive Design for Mobile & Tablets */
+@media screen and (max-width: 1050px) {
+  .description {
+    width: 100%;
+    text-align: justify;
+  }
+  .buttonContainer {
+    width: 100%;
+  }
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .pricingDescription {
+    width: 100%;
+  }
+
+  .pricingTable {
+    font-size: 12px;
+    width: 100%;
+  }
+  .costingSection {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .description {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .pricingTitle {
+    font-size: 24px;
+  }
+
+  .pricingTable {
+    width: 100%;
+    /* display: block; */
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .costingSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagePlaceholder img {
+    width: 100%;
+    height: auto;
+  }
+
+  .costingContent {
+    width: 100%;
+  }
+
+  .getDetailsButton,
+  .brochureButton {
+    /* width: 100%; */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .description {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .pricingTitle {
+    font-size: 20px;
+  }
+
+  .pricingDescription {
+    font-size: 12px;
+  }
+  .pricingTable {
+    display: block;
+  }
+  .pricingTable th,
+  .pricingTable td {
+    font-size: 10px;
+    padding: 8px;
+  }
+
+  .costingContent > h3 {
+    font-size: 18px;
+  }
+
+  .costingContent > p {
+    font-size: 14px;
+  }
+
+  .getDetailsButton,
+  .brochureButton {
+    font-size: 12px;
+    padding: 8px;
+  }
+  /* .buttonContainer {
+    width: 100%;
+  } */
+}

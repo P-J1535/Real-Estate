@@ -1,0 +1,155 @@
+.navbar {
+  position: fixed; /* Keep navbar fixed */
+  top: 0; /* Stick it to the top */
+  left: 0;
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 0px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 1px solid rgb(53, 139, 109);
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.logo {
+  font-size: 18px;
+  font-weight: 500;
+  color: #023020;
+  display: flex;
+  gap: 30px;
+}
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #023020;
+}
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+  /* align-items: center; */
+}
+
+.navLinks li {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #023020;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.navLinks a:hover {
+  background: #f2f4f4;
+}
+.activeLink {
+  background: #f2f4f4;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-weight: bold;
+}
+.downloadBtn {
+  background: #023020;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.downloadBtn > span {
+  display: flex;
+  text-align: center;
+  gap: 7px;
+  transition: transform 0.4s ease-in-out;
+  animation: scaleAnimation 1.4s infinite alternate;
+}
+.something {
+  display: flex;
+  gap: 10px;
+}
+.downloadBtn:hover {
+  opacity: 0.9;
+}
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Add margin to the body so content doesn't overlap with navbar */
+body {
+  margin-top: 60px; /* Adjust based on navbar height */
+}
+
+@media (max-width: 1050px) {
+  .navLinks {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .showMenu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .downloadBtn {
+    padding: 5px 10px;
+    font-size: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .downloadBtn > span {
+    display: flex;
+    text-align: center;
+    gap: 7px;
+    transition: transform 0.4s ease-in-out;
+    animation: scaleAnimation 1.4s infinite alternate;
+  }
+}

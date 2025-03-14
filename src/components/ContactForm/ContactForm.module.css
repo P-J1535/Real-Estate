@@ -1,0 +1,147 @@
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.heading {
+  color: #111827;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.callUsText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items at the start */
+  align-items: flex-start; /* Align text to the left */
+  gap: 10px;
+}
+.callUs,
+.phone {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.callUsBox {
+  background-color: #023020;
+  padding-left: 1px;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px;
+}
+
+.callIcon {
+  font-size: 16px;
+}
+
+.callUs {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.phone {
+  font-size: 12px;
+}
+.phoneInputContainer {
+  width: 100%;
+}
+
+.phoneInput {
+  width: 100% !important;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+/* Styling for the site visit section */
+.siteVisitBox {
+  background-color: #f3f4f6;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.siteVisiteText {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start;  */
+  align-items: flex-start;
+  gap: 0px;
+  padding-left: 10px;
+}
+
+.siteVisitImage {
+  width: 50px; /* Adjust image size */
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.input,
+.phoneInput {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.phoneInputContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.countryCode {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.phoneInput {
+  flex-grow: 1;
+  border-radius: 0 5px 5px 0;
+  border-left: none;
+}
+
+.submitButton,
+.bookVisitButton {
+  background-color: #023020;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.siteVisitTitle {
+  font-size: 14px;
+  font-weight: bold;
+  color: #111827;
+  font-weight: 500;
+  line-height: 12px;
+}
+
+.siteVisitSubtitle {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+@media (max-width: 1050px) {
+  .siteVisitBox,
+  .bookVisitButton {
+    display: none;
+  }
+}

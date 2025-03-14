@@ -1,0 +1,231 @@
+.container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  padding: 40px 25px;
+  /* background-color: #f8f9fa; */
+  background-color: #ffffff;
+  gap: 25px;
+}
+.sliderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.mainTitle {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #111827;
+}
+
+.mainTitle > span {
+  display: inline-block;
+  position: relative;
+}
+
+.mainTitle > span::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #023020;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.title span {
+  color: #007bff;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.subHeading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.brochureButton {
+  background-color: #024b30;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+.brochureButton:hover {
+  background-color: #017a4b;
+  transform: scale(1.05);
+}
+.slider {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.amenityCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  gap: 20px;
+  margin: 20px;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.6); */
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.prevArrow,
+.nextArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /* background: rgba(0, 0, 0, 0.5); */
+  background-color: #e6fff6;
+  color: #000000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  border: 0.5px solid #000000;
+}
+
+.prevArrow {
+  left: 30px;
+}
+
+.nextArrow {
+  right: 30px;
+}
+
+@media (max-width: 1024px) {
+  .prevArrow {
+    left: 30px;
+  }
+  .container {
+    width: 100%;
+  }
+  .nextArrow {
+    left: 460px;
+  }
+
+  .image {
+    height: 180px;
+  }
+  .buttonGrp {
+    display: flex;
+    justify-content: flex-start; /* Default alignment */
+    width: 100%;
+  }
+
+  /* @media (max-width: 1024px) { */
+  .buttonGrp {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* } */
+  }
+}
+
+@media (max-width: 768px) {
+  .prevArrow,
+  .nextArrow {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .image {
+    height: 160px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  .brochureButton {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .mainTitle > span {
+    font-size: 18px;
+  }
+  .mainTitle > span::after {
+    bottom: 0px;
+  }
+  .mainSubtitle {
+    display: flex;
+    width: 100%;
+  }
+  .brochureButton {
+    margin-top: 10px;
+  }
+  .prevArrow {
+    left: 30px;
+  }
+
+  .nextArrow {
+    left: 260px;
+  }
+}

@@ -1,0 +1,306 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  padding: 10px;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal {
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  border-radius: 8px;
+  width: 800px;
+  max-width: 90%;
+  overflow: hidden;
+  position: relative;
+  animation: fadeInScale 0.3s ease-in-out;
+}
+
+.leftSide {
+  flex: 1;
+  background:
+    linear-gradient(rgba(0.9, 0.9, 0.9, 0.8), rgba(0.9, 0.9, 0.9, 0.8)),
+    url("../../assets/Images/banner-2.webp") no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.callUs {
+  color: #ffffffb2;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.image {
+  width: 150px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.textBlock h2 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.icon {
+  background-color: #ffffff1a;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.menu p:first-child {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu p:last-child {
+  color: #ffffffb2;
+  font-size: 14px;
+}
+
+.textBlock > p {
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.textBlock strong {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Right Side */
+.rightSide {
+  flex: 1;
+  padding: 30px;
+  background-color: #e6fff6cc;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+h2 {
+  color: #181b1a;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #555e5b;
+  font-size: 14px;
+}
+
+.formContainer {
+  background: rgba(255, 255, 255, 1);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.heading {
+  color: #111827;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.callUsBox {
+  background-color: #023020;
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  width: 100%;
+}
+
+.callIcon {
+  background-color: #ffffff1a;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.callUs {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.phone {
+  font-size: 12px;
+  color: #ffffff;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.phoneInputContainer {
+  width: 100%;
+  /* padding: 10px; */
+  margin: 10px 0;
+  border-radius: 5px;
+  /* border: 1px solid #ccc; */
+}
+.phoneInput {
+  width: 100% !important;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.submitButton {
+  background-color: #023020;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.submitButton:hover {
+  background-color: #004d40;
+}
+.textBlockMobile {
+  display: none;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .leftSide {
+    display: none;
+  }
+
+  .textBlockMobile {
+    display: flex;
+    gap: 50px;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+  }
+  .menuMobile {
+    display: flex;
+    flex-direction: column;
+    background-color: #cde4ce80;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    padding: 20px 30px;
+  }
+  .textDisplayMobile {
+    font-size: 10px;
+  }
+  .rightSide {
+    padding: 20px;
+    /* text-align: center; */
+  }
+
+  .formContainer {
+    max-width: 100%;
+  }
+
+  .closeIcon {
+    top: 10px;
+    right: 10px;
+  }
+}
+@media (max-width: 540px) {
+  .menuMobile {
+    padding: 10px 10px;
+  }
+}
+@media (max-width: 480px) {
+  .modal {
+    width: 95%;
+  }
+
+  .textBlock h2 {
+    font-size: 18px;
+  }
+
+  .menu p:first-child {
+    font-size: 14px;
+  }
+  .menuMobile {
+    padding: 10px 10px;
+  }
+  .textBlockMobile {
+    gap: 10px;
+  }
+  .menu p:last-child {
+    font-size: 12px;
+  }
+
+  .formContainer {
+    padding: 15px;
+  }
+
+  .input {
+    padding: 8px;
+  }
+
+  .submitButton {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,274 @@
+/* Container */
+.container {
+  width: 78%;
+  /* max-width: 1200px; */
+  text-align: left;
+  padding-left: 30px;
+  background-color: #f9fafb;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* margin: 50px auto; */
+}
+
+/* Title & Subtitle */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111;
+  border-bottom: 3px solid #00332a;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Location Wrapper */
+.locationWrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Map View */
+.mapView,
+.locationDetails {
+  width: 48%;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Google Map */
+.map {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow:
+    0px 10px 20px rgba(0, 0, 0, 0.15),
+    0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Optional: Add hover effect for a subtle elevation */
+.map:hover {
+  box-shadow:
+    0px 12px 24px rgba(0, 0, 0, 0.2),
+    0px 6px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Buttons */
+.directionsButton,
+.locationButton {
+  display: flex;
+  align-items: center;
+  background: #00332a;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  gap: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.directionsButton:hover,
+.locationButton:hover {
+  background: #00251c;
+}
+
+/* Image & Overlay */
+.imageWrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Optional: Add a hover effect for a more interactive feel */
+.image:hover {
+  transform: scale(1.02); /* Slight zoom */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 51, 42, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.imageWrapper:hover .overlay {
+  opacity: 1;
+}
+
+/* Nearby Landmarks */
+.landmarks {
+  margin-top: 30px;
+}
+
+.landmarkList {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.firstRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.firstRow li {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #111827;
+  font-size: 16px;
+}
+.landmarks > h3 {
+  color: #111827;
+  font-size: 20px;
+}
+.landmarkList > li {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.firstRow > li > p {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* MUI Location Icon */
+.landmarkIcon {
+  color: #00332a;
+}
+
+@media (max-width: 1050px) {
+  .container {
+    width: 100%;
+  }
+  .map,
+  .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-right: 30px;
+  }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .locationWrapper {
+    flex-direction: column;
+  }
+  .container {
+    width: 100%;
+  }
+  .map,
+  .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-right: 30px;
+  }
+  /* .firstRow {
+    display: block;
+    width: 100%;
+  } */
+  .mapView,
+  .locationDetails {
+    width: 100%;
+  }
+
+  .map {
+    height: 200px;
+  }
+
+  .image {
+    height: 200px;
+  }
+
+  .directionsButton,
+  .locationButton {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .landmarkList li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* .container {
+    width: 100%;
+  }
+  .map,
+  .image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-right: 30px;
+  } */
+  .firstRow {
+    display: block;
+    width: 100%;
+  }
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .map {
+    height: 180px;
+  }
+
+  .image {
+    height: 180px;
+  }
+
+  .landmarkList li {
+    font-size: 13px;
+  }
+}

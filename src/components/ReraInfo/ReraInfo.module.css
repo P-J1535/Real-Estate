@@ -1,0 +1,118 @@
+/* ReraInfo.module.css */
+
+.container {
+  width: 78%;
+  /* margin: auto; */
+  padding: 2rem;
+  background-color: #ffffffff;
+  border-radius: 10px;
+  /* text-align: center; */
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.subTitle {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.qrContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.qrBox {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.qrImage {
+  width: 120px;
+  height: 120px;
+}
+
+.reraNumber {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #444;
+}
+
+.legalSection {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.legalSection ul {
+  padding-left: 20px;
+}
+
+.legalSection li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.disclaimer {
+  background: #eee;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: justify;
+}
+.copyRIght {
+  background: #eee;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 20px;
+  /* margin-bottom: 10px; */
+  width: 78%;
+  display: flex;
+  justify-content: center;
+}
+
+.copyRIght > p {
+  font-weight: 500;
+  font-size: 16px;
+  color: #6b7280;
+}
+.copyRIght > p > span {
+  color: #023020;
+  font-weight: 500;
+}
+@media (max-width: 1050px) {
+  .container {
+    padding: 2rem;
+    width: 100%;
+  }
+  .copyRIght {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 450px) {
+  .copyRIght {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
