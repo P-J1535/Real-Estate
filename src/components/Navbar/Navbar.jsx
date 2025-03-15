@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import {
   FaHome,
@@ -7,11 +8,7 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa";
-import {
-  MdOutlineArchitecture,
-  MdPhotoLibrary,
-  MdVideoLibrary,
-} from "react-icons/md";
+import { MdPhotoLibrary } from "react-icons/md";
 import NavLogo from "../../assets/Images/logo.svg";
 import { Download } from "lucide-react";
 import BrochureModal from "../BrochureModal/BrochureModal";
@@ -25,15 +22,24 @@ const Navbar = () => {
     title: "Download Brochure",
     description: "Download the brochure to learn more about Lodha Amara",
   });
-  const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const scrollToSection = (id) => {
-    setActiveSection(id);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Scroll to section on URL change
+  useEffect(() => {
+    const sectionId = location.pathname.substring(1); // Remove "/"
+    if (sectionId) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
+  }, [location.pathname]);
+
+  const handleNavigation = (id) => {
+    navigate(`/${id}`); // Updates URL
     setMenuOpen(false); // Close menu after clicking
   };
 
@@ -53,8 +59,10 @@ const Navbar = () => {
           >
             <li>
               <a
-                className={activeSection === "home" ? styles.activeLink : ""}
-                onClick={() => scrollToSection("home")}
+                className={
+                  location.pathname === "/home" ? styles.activeLink : ""
+                }
+                onClick={() => handleNavigation("home")}
               >
                 <FaHome /> Home
               </a>
@@ -62,9 +70,9 @@ const Navbar = () => {
             <li>
               <a
                 className={
-                  activeSection === "priceFactor" ? styles.activeLink : ""
+                  location.pathname === "/priceFactor" ? styles.activeLink : ""
                 }
-                onClick={() => scrollToSection("priceFactor")}
+                onClick={() => handleNavigation("priceFactor")}
               >
                 <FaRupeeSign /> Price
               </a>
@@ -72,9 +80,9 @@ const Navbar = () => {
             <li>
               <a
                 className={
-                  activeSection === "floorplan" ? styles.activeLink : ""
+                  location.pathname === "/floorplan" ? styles.activeLink : ""
                 }
-                onClick={() => scrollToSection("floorplan")}
+                onClick={() => handleNavigation("floorplan")}
               >
                 <GridViewOutlinedIcon sx={{ fontSize: "15px" }} /> Site & Floor
                 Plan
@@ -83,17 +91,19 @@ const Navbar = () => {
             <li>
               <a
                 className={
-                  activeSection === "amenities" ? styles.activeLink : ""
+                  location.pathname === "/amenities" ? styles.activeLink : ""
                 }
-                onClick={() => scrollToSection("amenities")}
+                onClick={() => handleNavigation("amenities")}
               >
                 <WifiOutlinedIcon sx={{ fontSize: "15px" }} /> Amenities
               </a>
             </li>
             <li>
               <a
-                className={activeSection === "gallery" ? styles.activeLink : ""}
-                onClick={() => scrollToSection("gallery")}
+                className={
+                  location.pathname === "/gallery" ? styles.activeLink : ""
+                }
+                onClick={() => handleNavigation("gallery")}
               >
                 <MdPhotoLibrary /> Gallery
               </a>
@@ -101,9 +111,9 @@ const Navbar = () => {
             <li>
               <a
                 className={
-                  activeSection === "location" ? styles.activeLink : ""
+                  location.pathname === "/location" ? styles.activeLink : ""
                 }
-                onClick={() => scrollToSection("location")}
+                onClick={() => handleNavigation("location")}
               >
                 <FaMapMarkerAlt /> Location
               </a>
@@ -111,9 +121,9 @@ const Navbar = () => {
             <li>
               <a
                 className={
-                  activeSection === "virtualSite" ? styles.activeLink : ""
+                  location.pathname === "/virtualSite" ? styles.activeLink : ""
                 }
-                onClick={() => scrollToSection("virtualSite")}
+                onClick={() => handleNavigation("virtualSite")}
               >
                 <VideocamOutlinedIcon sx={{ fontSize: "20px" }} /> Virtual Site
                 Visit
