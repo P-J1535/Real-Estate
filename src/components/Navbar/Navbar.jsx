@@ -15,6 +15,9 @@ import {
 import NavLogo from "../../assets/Images/logo.svg";
 import { Download } from "lucide-react";
 import BrochureModal from "../BrochureModal/BrochureModal";
+import WifiOutlinedIcon from "@mui/icons-material/WifiOutlined";
+import VideocamOutlinedIcon from "@mui/icons-material/VideocamOutlined";
+import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 
 const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
@@ -73,7 +76,8 @@ const Navbar = () => {
                 }
                 onClick={() => scrollToSection("floorplan")}
               >
-                <MdOutlineArchitecture /> Site & Floor Plan
+                <GridViewOutlinedIcon sx={{ fontSize: "15px" }} /> Site & Floor
+                Plan
               </a>
             </li>
             <li>
@@ -83,7 +87,7 @@ const Navbar = () => {
                 }
                 onClick={() => scrollToSection("amenities")}
               >
-                <MdPhotoLibrary /> Amenities
+                <WifiOutlinedIcon sx={{ fontSize: "15px" }} /> Amenities
               </a>
             </li>
             <li>
@@ -91,7 +95,7 @@ const Navbar = () => {
                 className={activeSection === "gallery" ? styles.activeLink : ""}
                 onClick={() => scrollToSection("gallery")}
               >
-                <MdVideoLibrary /> Gallery
+                <MdPhotoLibrary /> Gallery
               </a>
             </li>
             <li>
@@ -111,7 +115,8 @@ const Navbar = () => {
                 }
                 onClick={() => scrollToSection("virtualSite")}
               >
-                <FaMapMarkerAlt /> Virtual Site Visit
+                <VideocamOutlinedIcon sx={{ fontSize: "20px" }} /> Virtual Site
+                Visit
               </a>
             </li>
           </ul>
